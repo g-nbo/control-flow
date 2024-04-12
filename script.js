@@ -20,17 +20,18 @@ for (i = 1; i <= weeks; i++) {
     console.log(`============================================`)
     console.log(`There's (${takenSpace} out of ${area}) sq meters of taken Space after ${i} week(s) of growth `);
     console.log(`There are ${totalPlants} Total Plants after ${i} week(s) of growth `);
+    if (totalPlants <= 49) {
+        console.log(`Planted, there is more room to plant more plants.`)
+    } else if (totalPlants > 49  && totalPlants <= 78) {
+        console.log(`Monitored, they are growing at an acceptable rate.`)
+    } else if (totalPlants > 78) {
+        console.log(`Pruned, stop them from exceeding the capacity of the garden.`)
+    }
     console.log(`============================================`)
 }
 
 // Implement control flow to make decisions on how to handle the growth of the plants
-if (totalPlants <= 49) {
-    console.log(`Planted, there is more room to plant more plants.`)
-} else if (totalPlants > 49  && totalPlants <= 78) {
-    console.log(`Monitored, they are growing at an acceptable rate.`)
-} else if (totalPlants > 78) {
-    console.log(`Pruned, stop them from exceeding the capacity of the garden.`)
-}
+
 
 let totalSpace = 0;
 let newPlants = 0;
