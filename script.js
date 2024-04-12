@@ -29,6 +29,8 @@ for (i = 1; i <= weeks; i++) {
     } else if (totalPlants > 78) {
         console.log(`Pruned, stop them from exceeding the capacity of the garden.`)
     } else if (totalPlants > 97) {
+
+        // Try Throw Catch error for scientist
         try {
             throw new Error('WARNING: Exceeding MAX Capacity of Garden!');
         } catch (error) {
@@ -57,6 +59,8 @@ function additionalSpace() {
         console.log(`There's (${totalSpace} sq meters taken after ${i} week(s) of growth `);
         console.log(`There are ${newPlants} Total Plants after ${i} week(s) of growth `);
         console.log(`============================================`)
+
+        // Try Throw Catch error for scientist
         if (totalPlants > 97) {
             try {
                 throw new Error('WARNING: Exceeding MAX Capacity of Garden!');
@@ -75,7 +79,7 @@ function additionalSpace() {
 }
 
 additionalSpace(); // There are 1600 sq meters taken and 102400 total plants after 10 weeks of growth
-// Additional space = 
+// Additional space required = 1521.4625
 
 
 
