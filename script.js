@@ -24,10 +24,16 @@ for (i = 1; i <= weeks; i++) {
     // Implement control flow to make decisions on how to handle the growth of the plants
     if (totalPlants <= 49) {
         console.log(`Planted, there is more room to plant more plants.`)
-    } else if (totalPlants > 49  && totalPlants <= 78) {
+    } else if (totalPlants > 49 && totalPlants <= 78) {
         console.log(`Monitored, they are growing at an acceptable rate.`)
     } else if (totalPlants > 78) {
         console.log(`Pruned, stop them from exceeding the capacity of the garden.`)
+    } else if (totalPlants > 97) {
+        try {
+            throw new Error('WARNING: Exceeding MAX Capacity of Garden!');
+        } catch (error) {
+            console.error(error + ": WARNING: Do not advise you continue past this point! :WARNING");
+        }
     }
     console.log(`============================================`)
 } // Week 1: Plant more, Week 2: Pruned, Week 3: Pruned.
@@ -51,6 +57,13 @@ function additionalSpace() {
         console.log(`There's (${totalSpace} sq meters taken after ${i} week(s) of growth `);
         console.log(`There are ${newPlants} Total Plants after ${i} week(s) of growth `);
         console.log(`============================================`)
+        if (totalPlants > 97) {
+            try {
+                throw new Error('WARNING: Exceeding MAX Capacity of Garden!');
+            } catch (error) {
+                console.error(error + ": WARNING: Do not advise you continue past this point! :WARNING");
+            }
+        }
     }
 
     // The radius of the new expanded garden
@@ -62,7 +75,7 @@ function additionalSpace() {
 }
 
 additionalSpace(); // There are 1600 sq meters taken and 102400 total plants after 10 weeks of growth
-                    // Additional space = 
+// Additional space = 
 
 
 
